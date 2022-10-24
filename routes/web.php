@@ -15,8 +15,24 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('home');
+})->name('home');
+
+Route::get('/howto', function () {
+    return view('howto');
+})->name('howto');
+
+Route::get('/gallery', function () {
+    return view('gallery');
+})->name('gallery');
+
+Route::get('/download', function () {
+    return view('download');
+})->name('download');
+
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
 
 // Route::get('/logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index')->middleware('APIkey');
 Route::get('/logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
